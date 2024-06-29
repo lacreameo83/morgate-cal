@@ -9,12 +9,17 @@ function calculator(){
     let borrowedAmount = parseFloat(moneyBorrowed.value);
     let interestPercentage = parseFloat(percentageToBePaid.value);
     let years = parseFloat(year.value);
+
+
+   let percentage = ( borrowedAmount * interestPercentage )/100;
+
     
-    let paid = (interestPercentage / 100) * borrowedAmount * years;
+    let paid = percentage * borrowedAmount * years;
     
     totalToBePaid.textContent = paid.toFixed(6); 
    
 }
+
 // for monthly payment
 function monthlyPayMent1(){
     let years = parseFloat(year.value);
@@ -35,7 +40,8 @@ monthlyPayMent1()
 })
 const repayment1 = document.getElementById("repayment1")
 repayment1.addEventListener("click",()=>{
-    mmm.style.background  = "pink"
+    mmm.style.background  = "#c7ed21"
+     mmm.style.border  = "#c7ed21"
 calculator();
 monthlyPayMent1()
 }
@@ -44,6 +50,7 @@ monthlyPayMent1()
 const repayment2 = document.getElementById("repayment2")
 repayment2.addEventListener("click",()=>{
     mmm2.style.background  = "green"
+     mmm2.style.border  = "green"
 calculator();
 }
 )
