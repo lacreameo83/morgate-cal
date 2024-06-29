@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="container">
+         <div class="main-container"> 
+             <div class="main1">
+                <div class="main1-container">
+                     <div class="main1-contents1"><h2>Mortage Calculator</h2> <a href="#">Clear All</a></div>
+
+                     <form>
+                       <label for="Mortage">Mortage Amount</label> 
+                       <div class="input-contents-1">
+                        <div class="icone-euro"><i class="fa-solid fa-euro-sign"></i></div>
+                             <div><input  id="MortageAmont" type="number" placeholder="300.00"></div>
+                       </div>
+                       
+                        <div class="input-contents-2">
+                            <div>
+                                <label for="years">Mortage Terms</label>
+                               <div class="years-container">
+                                <div><input type="number" id="year" placeholder="25"></div>
+                                <div><p class="per-contents p">Years</p></div>
+                               </div>
+                            </div>
+                            
+                            <div class="input-contents-input">
+                                <label for="intrest">Intrest Rate</label>
+                                <div class="years-container">
+                                    <div><input id="percentage" type="number" placeholder="6.25"></div>
+                                    <div><p class="per-contents">%</p></div>
+                                </div>
+                            </div>   
+                        </div>
+
+                        <label for="MortageType">Mortage Type</label>
+                        <div id="mmm"  class="radio-box"><input type="radio" id="repayment1" name="mortageType"><span class="radio-text">Repayment</span></div>
+                        <div id="mmm2" class="radio-box"><input type="radio" id="repayment2" name="mortageType"><span class="radio-text">Intrest Only</span></div>
+
+                           <button type="submit" value="Submit" id="calculator-repayment" class="cal-repayment"><i class="fa-solid fa-calculator"></i>   Calculate Repayment</button>
+                     </form>
+                     
+                 </div>
+              </div>
+
+
+              <div class="main2">
+                   <div class="main2-container">
+                    <div class="main2-container2">
+                        <h2>Your results</h2>
+                        <p>Your results are shown below based on the information you provided. To adjust the result the results, edit the form and click "calculate repayment"again</p>
+                        <div class="main2-container2b">
+                             <p>Your monthly repayment</p>
+                             <div class="sec-2-text-yelow">
+                                <i class="fa-solid fa-euro-sign"></i>
+                                <span id="monthlyPayMent"></span>
+                            </div>
+                            <hr>
+                            <p>Total you'll repay over the term</p>
+                            <div class="sec-2-text-repay">
+                                <i class="fa-solid fa-euro-sign"></i>
+                                <span id="totalTpBePaid"></span>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    </div>
+             </div>
+         </div> 
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
