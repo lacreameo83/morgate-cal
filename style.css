@@ -46,10 +46,11 @@ label {
 .input-contents-1 {
     display: flex;
     margin-bottom: 20px;
+    width: 100%;
 }
 .icone-euro {
     background-color:  rgb(205, 237, 237);
-    width: 4em;
+    width: 15%;
     padding: 7px 0;
     text-align: center;
     font-size: 15px;
@@ -65,7 +66,7 @@ form {
 }
 #MortageAmont {
     padding: 8px 0;
-    width: 220%;
+    width:220%;
 outline: none;
 border: none;
 border-top:1px solid black ;
@@ -80,6 +81,7 @@ border-radius:  0 5px 5px  0;
 }
 .years-container {
     display: flex;
+    width: 100%;
 }
 .years-container input {
  padding: 8px 0;
@@ -97,16 +99,41 @@ border-radius:  5px 0   0 5px;
 border-top:1px solid black ;
 border-right:1px solid black ;
 border-bottom:1px solid black ; 
-width: 50px;
+width: 100%;
 text-align: center;
 font-size: 16px;
 border-radius:   0 5px  5px 0 ;
 background-color:rgb(205, 237, 237);
 }
-.input-contents-input {
+/* .input-contents-input {
     margin-left: 10px;
 
-}
+} */
+ .years-container2 {
+    display: flex;
+    width: 100%;
+ }
+ .years-container2 input {
+    padding: 8px 0;
+    width: 100%;
+   outline: none;
+   border: none;
+   border-top:1px solid black ;
+   border-left:1px solid black ;
+   border-bottom:1px solid black ; 
+   border-radius:  5px 0   0 5px;
+ }
+ .years-container2 p {
+    width: 330%;
+    padding: 6.5px 0; 
+    border-top:1px solid black ;
+    border-right:1px solid black ;
+    border-bottom:1px solid black ; 
+    text-align: center;
+    font-size: 16px;
+    border-radius:   0 5px  5px 0 ;
+    background-color:rgb(205, 237, 237);
+ }
 .radio-box {
     padding: 8px 0;
     border: 1px solid black;
@@ -178,6 +205,12 @@ background-color: aqua;
 }
 
 @media (max-width:500px){
+
+    section {
+        height: fit-content;
+        width: 100%;
+        
+    }
     .main-container {
         display: grid;
        grid-template-columns: 1fr ;
@@ -185,6 +218,51 @@ background-color: aqua;
        width: 90%;
       
        }
+
+       .input-contents-1 {
+        display: flex;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+   
+    #MortageAmont {
+        padding: 8px 0;
+        width:170%;
+    }
+    .input-contents-2 {
+        display: grid;
+        grid-template-columns:1fr;
+        margin-bottom: 20px;
+    }
+    .years-container {
+        display: flex;
+        width: 100%;
+    }
+    .years-container input {
+     padding: 8px 0;
+     width: 180%;
+    outline: none;
+    border: none;
+    border-top:1px solid black ;
+    border-left:1px solid black ;
+    border-bottom:1px solid black ; 
+    border-radius:  5px 0   0 5px;
+    
+    }
+    .years-container  p {
+   margin-left: 210%;
+    width: 130%;
+  
+    }
+   
+     .years-container2 input {
+        padding: 8px 0;
+        width: 180%;
+     }
+     .years-container2 p {
+        width: 330%;
+       margin-left: 520%;
+     }
 
        .main1-contents1 {
         display: grid;
@@ -196,25 +274,11 @@ background-color: aqua;
         display: grid;
         grid-template-columns: 1fr;
     }
-    #MortageAmont {
-    padding: 8px 0;
-    width: 160%;
-    }
+   
 
-    .years-container input {
-        padding: 8px 0;
-        width: 180%;
-       }
-    .input-contents-input {
-        margin-left:0;
-    
-    }
+  
 
-    .years-container  p {
-        padding: 6.5px 0; 
-       width: 150%;
-       /* margin-left: 250%; */
-}
+  
 .per-contents {
     margin-left: 45px;
 }
