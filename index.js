@@ -4,6 +4,8 @@ let year = document.getElementById("year");
 let percentageToBePaid = document.getElementById("percentage");
 let calculatorRepayment =document.getElementById("calculator-repayment")
 let totalToBePaid = document.getElementById("totalTpBePaid")
+const clearAll = document.getElementById("clearAll");
+const monthlyPayMent = document.getElementById("monthlyPayMent")
 
 function calculator(){
     let borrowedAmount = parseFloat(moneyBorrowed.value);
@@ -30,7 +32,21 @@ let month = ( years / 12 ) * borrowedAmount;
 monthlyPayMent.textContent=month.toFixed(2)
 }
 
+clearAll.addEventListener("click",() => {
+    moneyBorrowed.value="";
+    percentageToBePaid.value="";
+    year.value="";
+    totalToBePaid.textContent="";
+    monthlyPayMent.textContent="";
 
+     document.getElementById("mmm").style.background  = "white"
+     document.getElementById("mmm").style.border ="1px solid black"
+
+          document.getElementById("mmm2").style.background  = "white"
+     document.getElementById("mmm2").style.border ="1px solid black"
+    
+    
+})
 
 
 calculatorRepayment.addEventListener("click",(e) => {
