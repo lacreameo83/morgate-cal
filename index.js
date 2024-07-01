@@ -6,31 +6,34 @@ let calculatorRepayment =document.getElementById("calculator-repayment")
 let totalToBePaid = document.getElementById("totalTpBePaid")
 const clearAll = document.getElementById("clearAll");
 const monthlyPayMent = document.getElementById("monthlyPayMent")
+let paid;
 
 function calculator(){
-    let borrowedAmount = parseFloat(moneyBorrowed.value);
-    let interestPercentage = parseFloat(percentageToBePaid.value);
-    let years = parseFloat(year.value);
+    let borrowedAmount = parseInt(moneyBorrowed.value);
+    let interestPercentage =  parseInt(percentageToBePaid.value);
+    let years =  parseInt(year.value);
 
 
    let percentage = ( borrowedAmount * interestPercentage )/100;
 
     
-    let paid = percentage * borrowedAmount * years;
+     paid = (percentage * years ) +  borrowedAmount;
     
     totalToBePaid.textContent = paid.toFixed(6); 
+
    
 }
 
 // for monthly payment
 function monthlyPayMent1(){
-    let years = parseFloat(year.value);
-    let borrowedAmount = parseFloat(moneyBorrowed.value);
+let years =  parseInt(year.value);
+let borrowedAmount =  parseInt(moneyBorrowed.value);
 
-    const monthlyPayMent = document.getElementById("monthlyPayMent")
-let month = ( years / 12 ) * borrowedAmount;
+ const monthlyPayMent = document.getElementById("monthlyPayMent")
+let month = paid / (12 * years);
 monthlyPayMent.textContent=month.toFixed(2)
 }
+
 
 clearAll.addEventListener("click",() => {
     moneyBorrowed.value="";
