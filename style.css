@@ -204,7 +204,7 @@ background-color:rgb(205, 237, 237);
 background-color: aqua;
 }
 
-@media (max-width:500px){
+@media (max-width:800px )  {
 
     section {
         height: fit-content;
@@ -227,7 +227,7 @@ background-color: aqua;
    
     #MortageAmont {
         padding: 8px 0;
-        width:170%;
+        width:100%;
     }
     .input-contents-2 {
         display: grid;
@@ -240,7 +240,7 @@ background-color: aqua;
     }
     .years-container input {
      padding: 8px 0;
-     width: 180%;
+     width: 100%;
     outline: none;
     border: none;
     border-top:1px solid black ;
@@ -251,12 +251,11 @@ background-color: aqua;
     }
     .years-container  p {
     width: 130%;
-  
     }
    
      .years-container2 input {
         padding: 8px 0;
-        width: 180%;
+        width: 100%;
      }
      .years-container2 p {
         width: 330%;
@@ -273,13 +272,32 @@ background-color: aqua;
         display: grid;
         grid-template-columns: 1fr;
     }
+    /* .per-contents {
+        margin-left: -80px;
+    } */
    
-
-  
-
   
 .per-contents {
     margin-left: 45px;
 }
 
  }
+
+  @media (max-width:330px){
+  #MortageAmont{
+    width: 100%;
+    padding: 8px;
+  }
+  #year {
+    width: 100%;
+    padding: 8px;
+  }
+  .per-contents {
+    margin-left: 0;
+  }
+  #percentage {
+    width: 100%;
+    padding: 8px;
+  }
+ 
+    }
